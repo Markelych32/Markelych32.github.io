@@ -1,0 +1,717 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Medium.ttf");
+  font-weight: 500;
+}
+:root {
+  --border-color: #474a51;
+  --text-color: #ff898a;
+  --header-footer-color: rgb(52, 52, 52);
+}
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  color: white;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  background-color: #fff;
+  padding: 32px 0;
+  margin: 0 auto;
+  background-color: var(--header-footer-color);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-link {
+  font-weight: 800;
+}
+
+.menu-link:hover {
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--border-color);
+}
+
+.main {
+  max-width: 1024px;
+  margin: 20px auto;
+  border: 5px solid var(--text-color);
+  padding: 40px;
+  background-color: var(--border-color);
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1fr 0.6fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "main-info . my-photo contact"
+    "about-me . education education"
+    "skills . references references"
+    "lang . job job"
+    "hobby . job job";
+  gap: 15px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-area: main-info;
+  text-align: left;
+}
+
+.main-info p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.main-info h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.my-photo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  grid-area: my-photo;
+}
+.my-photo img {
+  width: 60%;
+  border: 5px solid white;
+}
+
+.contact {
+  grid-area: contact;
+  color: white;
+}
+
+.contact .border-line {
+  display: none;
+}
+
+.contact-info li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 15px;
+}
+
+.contact-info li span {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info li h2 {
+  display: block;
+}
+.above {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.above-title {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 15px;
+}
+.above-title span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.about-me {
+  grid-area: about-me;
+}
+
+.about-me p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.border-line {
+  content: "";
+  height: 1px;
+  width: 100%;
+  margin-top: 40px;
+  border-bottom: 2px solid white;
+}
+
+.education {
+  grid-area: education;
+}
+
+.education p {
+  margin: 10px 0;
+}
+
+.flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.education-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "mirea"
+    "stanford";
+}
+
+.education-year {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.mirea-education {
+  grid-area: mirea;
+}
+
+.stanford-education {
+  grid-area: stanford;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "photoshop level1"
+    "illustrator level2"
+    "powerpoint level3"
+    "word level4"
+    "htmlCss level5";
+  gap: 15px;
+}
+
+.skills-grid p,
+.hobbies p {
+  font-weight: bold;
+  font-style: 16px;
+}
+
+.adobe-ph {
+  grid-area: photoshop;
+}
+
+.level {
+  height: 5px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: auto 0;
+}
+
+.skill-level1 {
+  grid-area: level1;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 85%,
+    var(--border-color) 85%
+  );
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.adove-ill {
+  grid-area: illustrator;
+}
+.skill-level2 {
+  grid-area: level2;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 90%,
+    var(--border-color) 90%
+  );
+}
+.powerpoint {
+  grid-area: powerpoint;
+}
+.skill-level3 {
+  grid-area: level3;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 75%,
+    var(--border-color) 75%
+  );
+}
+.word {
+  grid-area: word;
+}
+.skill-level4 {
+  grid-area: level4;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 70%,
+    var(--border-color) 70%
+  );
+}
+.htmlCss {
+  grid-area: htmlCss;
+}
+.skill-level5 {
+  grid-area: level5;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 90%,
+    var(--border-color) 90%
+  );
+}
+
+.references {
+  grid-area: references;
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+}
+
+.reference h3 {
+  margin-bottom: 15px;
+}
+
+.reference p {
+  margin-bottom: 5px;
+}
+
+.lang {
+  grid-area: lang;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "rus eng germ";
+  column-gap: 10px;
+}
+
+.lang-unit {
+  text-align: center;
+  width: 75%;
+  height: auto;
+  padding: 10px 15px;
+  background-color: var(--text-color);
+  color: var(--border-color);
+  border-radius: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hobbies {
+  grid-area: hobby;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "book-reading book-reading-level"
+    "travelling travelling-level"
+    "playing-chess playing-chess-level";
+  row-gap: 15px;
+}
+
+.book-reading {
+  grid-area: book-reading;
+}
+
+.travelling {
+  grid-area: travelling;
+}
+
+.playing-chess {
+  grid-area: playing-chess;
+}
+
+.book-reading-level {
+  grid-area: book-reading-level;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 84%,
+    var(--border-color) 84%
+  );
+}
+
+.travelling-level {
+  grid-area: travelling-level;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 65%,
+    var(--border-color) 65%
+  );
+}
+
+.playing-chess-level {
+  grid-area: playing-chess-level;
+  background: linear-gradient(
+    90deg,
+    var(--text-color) 93%,
+    var(--border-color) 93%
+  );
+}
+
+.job {
+  grid-area: job;
+}
+
+.job-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-flex-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.job-unit p {
+  line-height: 1.5;
+}
+
+.job-desc {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.job-time {
+  color: var(--text-color);
+}
+
+footer {
+  padding-top: 15px;
+  background-color: var(--header-footer-color);
+}
+
+.footer-inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.social_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 12%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 2px #f2f2f2;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social_icon i {
+  font-size: 26px;
+  color: var(--header-footer-color);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.social_icon::after {
+  opacity: 0;
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transform: translate(0, -49px);
+  border-radius: 12%;
+  transition: all 0.3s ease;
+}
+
+.social_icon.telegram:after {
+  background-color: #0088cc;
+}
+.social_icon.vk:after {
+  background-color: #0077ff;
+}
+.social_icon.git:after {
+  background-color: #333;
+}
+.social_icon.youtube:after {
+  background-color: #ff0000;
+}
+.social_icon.whatsapp:after {
+  background-color: #25d366;
+}
+
+.social_icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 0px 15px #00000080;
+}
+
+.social_icon:hover i {
+  color: #fff;
+}
+
+.social_icon:hover:after {
+  opacity: 1;
+  transform: translate(0);
+  cursor: pointer;
+}
+
+.footer-desc {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  main {
+    font-size: 14px;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr 0.1fr 1fr 0.6fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+  }
+
+  .above {
+    font-size: 18px;
+  }
+
+  .contact-info a {
+    font-size: 14px;
+  }
+
+  .social_icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social_icon i {
+    font-size: 24px;
+  }
+
+  .social_icon::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .main {
+    padding: 35px;
+    border: 4px solid var(--text-color);
+  }
+
+  .my-photo img {
+    width: 90%;
+  }
+
+  .education-grid h3 {
+    font-size: 14px;
+  }
+
+  .mirea-education p,
+  .stanford-education p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main {
+    border: 3px solid var(--text-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 20px;
+    border: none;
+  }
+  .main-info h1 {
+    font-size: 50px;
+  }
+
+  .my-photo img {
+    width: 40%;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas:
+      "main-info main-info"
+      "my-photo my-photo"
+      "contact education"
+      "about-me about-me"
+      "skills skills"
+      "references references"
+      "job job"
+      "hobby hobby"
+      "lang lang";
+    gap: 10px;
+  }
+
+  .above {
+    font-size: 16px;
+  }
+
+  .contact .border-line {
+    display: block;
+  }
+}
+
+@media (max-width: 570px) {
+  .main {
+    padding: 15px;
+  }
+
+  .education-grid h3 {
+    font-size: 14px;
+  }
+
+  .mirea-education p,
+  .stanford-education p {
+    font-size: 12px;
+  }
+
+  .menu-link {
+    font-size: 14px;
+  }
+
+  .lang-unit {
+    padding: 7px 10px;
+  }
+
+  .footer-inner {
+    gap: 40px;
+  }
+
+  .social_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social_icon i {
+    font-size: 20px;
+  }
+
+  .social_icon::after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-desc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 340px) {
+  .above {
+    font-size: 14px;
+  }
+  .menu-link {
+    font-size: 10px;
+  }
+  .footer-inner {
+    gap: 25px;
+  }
+}
