@@ -1,0 +1,678 @@
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,800&family=Happy+Monkey&family=Neucha&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@500&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"); */
+/*@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,800&family=Happy+Monkey&family=Neucha&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@500&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap");*/
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Medium.ttf");
+  font-weight: 500;
+}
+
+:root {
+  --border-color: #474a51;
+  --text-color: #ff898a;
+  --header-footer-color: rgb(52, 52, 52);
+}
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  color: white;
+  background-color: var(--border-color);
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  background-color: #fff;
+  padding: 32px 0;
+  margin: 0 auto;
+  background-color: var(--header-footer-color);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-link {
+  font-weight: 800;
+}
+
+.menu-link:hover {
+  color: var(--text-color);
+}
+
+.main {
+  max-width: 1024px;
+  margin: 20px auto;
+  border: 5px solid var(--text-color);
+  padding: 40px;
+  background-color: var(--border-color);
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "main-info main-info main-info main-info"
+    "main-photo main-photo main-photo main-photo"
+    "about-me about-me contact message"
+    "skills skills skills skills"
+    "portfolio portfolio portfolio portfolio";
+  gap: 15px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-area: main-info;
+  text-align: left;
+}
+
+.main-info p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.main-info h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.main-photo {
+  grid-area: main-photo;
+}
+
+.main-photo img {
+  width: calc(100% - 10px);
+  border: 5px solid white;
+}
+
+.above {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.above-title {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 15px;
+}
+.above-title span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.border-line {
+  content: "";
+  height: 1px;
+  width: 100%;
+  margin-top: 40px;
+  border-bottom: 2px solid white;
+}
+
+.about-me {
+  grid-area: about-me;
+}
+
+.about-me p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.contact {
+  grid-area: contact;
+  color: white;
+}
+
+.contact-info li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 15px;
+}
+
+.contact-info li span {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info li h2 {
+  display: block;
+}
+
+.message {
+  grid-area: message;
+}
+
+.center-div {
+  text-align: center;
+}
+
+.send-message-btn {
+  display: block;
+  text-align: center;
+  width: 75%;
+  height: auto;
+  padding: 10px 15px;
+  background-color: var(--text-color);
+  color: var(--border-color);
+  border-radius: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.send-message-btn:hover {
+  color: white;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "photoshop illustrator after-effects figma";
+  column-gap: 15px;
+}
+
+.photoshop {
+  grid-area: photoshop;
+}
+
+.illustrator {
+  grid-area: illustrator;
+}
+
+.after-effects {
+  grid-area: after-effects;
+}
+
+.figma {
+  grid-area: figma;
+}
+
+.skills-grid-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.skills-grid-item-desc {
+  text-align: center;
+}
+
+.above-title ~ p {
+  margin-bottom: 15px;
+}
+
+.skills-grid-item-btn {
+  display: block;
+  text-align: center;
+  width: 50%;
+  height: auto;
+  padding: 10px 15px;
+  background-color: var(--text-color);
+  color: var(--border-color);
+  border-radius: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.skills-grid-item-btn:hover {
+  color: white;
+}
+
+.portfolio {
+  grid-area: portfolio;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "reebok reebok-desc"
+    "levis-desc levis"
+    "braun braun-desc";
+  gap: 15px;
+}
+
+.portfolio-grid-img img {
+  width: 90%;
+  border: 5px solid white;
+  margin-bottom: 5px;
+}
+
+.portfolio-grid-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.portfolio-desc-name p {
+  text-align: center;
+}
+
+image-container-inner {
+  margin: auto 0;
+}
+
+.image-container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline {
+  display: inline;
+  border-bottom: 1px solid white;
+}
+
+.underline:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.marked {
+  display: inline;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.reebok {
+  grid-area: reebok;
+}
+
+.reebok img {
+  margin-top: 5px;
+}
+
+.reebok-desc {
+  grid-area: reebok-desc;
+}
+
+.levis {
+  grid-area: levis;
+}
+
+.levis-desc {
+  grid-area: levis-desc;
+}
+
+.braun {
+  grid-area: braun;
+}
+
+.braun-desc {
+  grid-area: braun-desc;
+}
+
+footer {
+  padding-top: 15px;
+  background-color: var(--header-footer-color);
+}
+
+.footer-inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.social_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 12%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 2px #f2f2f2;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social_icon i {
+  font-size: 26px;
+  color: var(--header-footer-color);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.social_icon::after {
+  opacity: 0;
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transform: translate(0, -49px);
+  border-radius: 12%;
+  transition: all 0.3s ease;
+}
+
+.social_icon.telegram:after {
+  background-color: #0088cc;
+}
+.social_icon.vk:after {
+  background-color: #0077ff;
+}
+.social_icon.git:after {
+  background-color: #333;
+}
+.social_icon.youtube:after {
+  background-color: #ff0000;
+}
+.social_icon.whatsapp:after {
+  background-color: #25d366;
+}
+
+.social_icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 0px 15px #00000080;
+}
+
+.social_icon:hover i {
+  color: #fff;
+}
+
+.social_icon:hover:after {
+  opacity: 1;
+  transform: translate(0);
+  cursor: pointer;
+}
+
+.footer-desc {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  main {
+    font-size: 14px;
+  }
+
+  .main-grid {
+    gap: 10px;
+  }
+
+  .above {
+    font-size: 18px;
+  }
+
+  .contact-info a {
+    font-size: 14px;
+  }
+
+  .social_icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social_icon i {
+    font-size: 24px;
+  }
+
+  .social_icon::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .main {
+    padding: 35px;
+    border: 4px solid var(--text-color);
+  }
+}
+
+@media (max-width: 800px) {
+  .main {
+    padding: 20px;
+    border: 3px solid var(--text-color);
+  }
+  .above {
+    font-size: 16px;
+  }
+
+  .send-message-btn,
+  .skills-grid-item-btn {
+    padding: 7px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    border: none;
+  }
+
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "main-info main-info"
+      "main-photo main-photo"
+      "about-me about-me"
+      "contact message"
+      "skills skills"
+      "portfolio portfolio";
+    gap: 10px;
+  }
+
+  .main-info h1 {
+    font-size: 50px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "photoshop illustrator"
+      "after-effects figma";
+    gap: 10px;
+  }
+
+  .send-message-btn {
+    width: 30%;
+    font-size: 12px;
+  }
+
+  .skills-grid-item-btn {
+    margin-top: 7px;
+    font-size: 12px;
+    width: 30%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "reebok reebok"
+      "reebok-desc reebok-desc"
+      "levis levis"
+      "levis-desc levis-desc"
+      "braun braun"
+      "braun-desc braun-desc";
+    gap: 10px;
+  }
+
+  .portfolio-grid-desc {
+    justify-content: start;
+    align-items: start;
+  }
+
+  .portfolio-grid-desc div {
+    text-align: center;
+  }
+  .portfolio-grid-img img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 675px) {
+  .send-message-btn {
+    width: 50%;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 570px) {
+  .main {
+    padding: 15px;
+  }
+
+  .menu-link {
+    font-size: 14px;
+  }
+
+  .skills-grid-item-btn {
+    font-size: 10px;
+    margin-top: 5px;
+    font-size: 10px;
+    width: 40%;
+  }
+
+  .footer-inner {
+    gap: 40px;
+  }
+
+  .skills-grid-item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills-grid-item-image img {
+    width: 80%;
+  }
+
+  .social_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social_icon i {
+    font-size: 20px;
+  }
+
+  .social_icon::after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-desc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 340px) {
+  .above {
+    font-size: 14px;
+  }
+
+  .menu-link {
+    font-size: 10px;
+  }
+
+  .footer-inner {
+    gap: 25px;
+  }
+
+  .skills-grid-item-btn {
+    width: 50%;
+  }
+  .send-message-btn {
+    width: 80%;
+  }
+
+  .skills-grid-item-image img {
+    width: 60%;
+  }
+}
