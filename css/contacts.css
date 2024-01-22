@@ -106,7 +106,6 @@ body {
 .main {
   max-width: 1024px;
   margin: 20px auto;
-  border: 5px solid var(--text-color);
   padding: 40px;
   background-color: var(--border-color);
   min-height: calc(100vh - (85px + 9px + 40px + 80px));
